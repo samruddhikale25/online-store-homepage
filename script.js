@@ -20,3 +20,40 @@ function displayProducts(){
 }
 
 displayProducts();
+
+document.getElementById("category").addEventListener("change", e=>{
+  let val = e.target.value;
+
+  let filtered = products.filter(p =>
+    val === "all" || p.category === val
+  );
+
+  displayFiltered(filtered);
+});
+
+document.getElementById("sort").addEventListener("change", e=>{
+  let sorted = [...products];
+
+  if(e.target.value==="low"){
+    sorted.sort((a,b)=>a.price-b.price);
+  } else {
+    sorted.sort((a,b)=>b.price-a.price);
+  }
+
+  displayFiltered(sorted);
+});
+
+function displayFiltered(data){
+  let container = document.querySelector(".grid");
+  container.innerHTML = "";
+
+  data.forEach(p=>{
+    container.innerHTML += `
+      <div class="bg-white/10 p-4 rounded-xl">
+        <img src="${p.image}">
+        <h2>${p.name}</h2>
+        <p>₹${p.price}</p>
+      </div>
+    `;
+  });
+}
