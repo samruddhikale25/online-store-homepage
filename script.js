@@ -57,3 +57,19 @@ function displayFiltered(data){
     `;
   });
 }
+
+// Search
+document.querySelector("input").addEventListener("keyup", e=>{
+  let val = e.target.value.toLowerCase();
+
+  let filtered = products.filter(p =>
+    p.name.toLowerCase().includes(val)
+  );
+
+  displayFiltered(filtered);
+});
+
+// Cart
+function addToCart(){
+  alert("Added to cart");
+}
