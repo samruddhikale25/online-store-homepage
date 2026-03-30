@@ -6,12 +6,12 @@ This project includes product categories, filtering, sorting, and basic cart fun
 ---
 
 ## 🚀 Live Demo
-🔗 https://your-live-link-here.com  
+🔗 https://samruddhikale25.github.io/online-store-homepage/ 
 
 ---
 
 ## 💻 GitHub Repository
-🔗 https://github.com/your-username/your-repo-name  
+🔗 https://github.com/samruddhikale25/online-store-homepage 
 
 ---
 
